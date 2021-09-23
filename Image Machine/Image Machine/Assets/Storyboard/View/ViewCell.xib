@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewCell" rowHeight="98" id="jn1-gh-2GL" customClass="ViewCell" customModule="Image_Machine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jn1-gh-2GL" id="TDK-C7-A10">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2JQ-Ob-wgR">
+                        <rect key="frame" x="20" y="20" width="374" height="58"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKF-SI-z8z">
+                                <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Ypg-Sz-eJw"/>
+                                    <constraint firstAttribute="width" secondItem="TKF-SI-z8z" secondAttribute="height" multiplier="1:1" id="pBZ-WH-tvL"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="325-kE-NrF">
+                                <rect key="frame" x="74" y="0.0" width="300" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-GL-dKR">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-Jk-inV">
+                                        <rect key="frame" x="0.0" y="19.5" width="300" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-1g-J3D">
+                                        <rect key="frame" x="0.0" y="39" width="300" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oNB-1g-J3D" firstAttribute="height" secondItem="8G6-Jk-inV" secondAttribute="height" multiplier="0.974359" id="wFL-Xn-pnW"/>
+                                    <constraint firstItem="8G6-Jk-inV" firstAttribute="height" secondItem="Q4R-GL-dKR" secondAttribute="height" id="x94-vK-cuq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2JQ-Ob-wgR" firstAttribute="top" secondItem="TDK-C7-A10" secondAttribute="top" constant="20" id="1Fw-rl-8z6"/>
+                    <constraint firstItem="2JQ-Ob-wgR" firstAttribute="leading" secondItem="TDK-C7-A10" secondAttribute="leading" constant="20" id="dwR-1R-2RS"/>
+                    <constraint firstAttribute="bottom" secondItem="2JQ-Ob-wgR" secondAttribute="bottom" constant="20" id="oSU-5K-VKM"/>
+                    <constraint firstAttribute="trailing" secondItem="2JQ-Ob-wgR" secondAttribute="trailing" constant="20" id="or9-fQ-qjW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="barcodeImg" destination="TKF-SI-z8z" id="QPa-cL-Gez"/>
+                <outlet property="barcodeNumberLbl" destination="oNB-1g-J3D" id="zLh-r2-eg5"/>
+                <outlet property="machineNameLbl" destination="Q4R-GL-dKR" id="OFu-4G-iPf"/>
+                <outlet property="machineTypeLbl" destination="8G6-Jk-inV" id="s5R-Uw-bwv"/>
+            </connections>
+            <point key="canvasLocation" x="108.69565217391305" y="66.964285714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
